@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZEAL IT Feast – Siddharth College</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -14,7 +15,6 @@
       overflow-x: hidden;
     }
 
-    /* Animated background particles */
     body::before {
       content: '';
       position: fixed;
@@ -33,114 +33,76 @@
       100% { transform: translateY(-50px); }
     }
 
+    /* ---------------- Header ---------------- */
+
     header {
       text-align: center;
       padding: 40px 10px;
       background: linear-gradient(90deg, #3a0070, #7d2cff);
-      position: relative;
-      animation: slideDown 1s ease-out;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    header img {
-      height: 120px;
-      margin: 10px;
-      animation: fadeIn 1.5s ease-out;
     }
 
     .logo-left, .logo-right {
-      height: 180px;
+      height: 150px;
       position: absolute;
       top: 10px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-      animation: bounceIn 1.2s ease-out;
+      transition: 0.3s ease;
     }
 
-    @keyframes bounceIn {
-      0% { transform: scale(0.3); opacity: 0; }
-      50% { transform: scale(1.05); }
-      70% { transform: scale(0.9); }
-      100% { transform: scale(1); opacity: 1; }
+    .logo-left { left: 10px; }
+    .logo-right { right: 10px; }
+
+    @media (max-width: 768px) {
+      .logo-left, .logo-right {
+        height: 80px;
+        top: 5px;
+      }
     }
 
-    .logo-left {
-      left: 10px;
+    header img[alt="College Logo"] {
+      height: 120px;
+      margin-top: 80px;
     }
 
-    .logo-right {
-      right: 10px;
-    }
-
-    .logo-left:hover {
-      transform: scale(1.1) rotate(5deg);
-      filter: brightness(1.2);
-    }
-
-    .logo-right:hover {
-      transform: scale(1.1) rotate(-5deg);
-      filter: brightness(1.2);
+    @media (max-width: 768px) {
+      header img[alt="College Logo"] {
+        height: 90px;
+        margin-top: 40px;
+      }
     }
 
     h1 {
       font-size: 50px;
-      margin: 0;
-      text-shadow: 0 0 20px #b47bff;
-      animation: glow 2s ease-in-out infinite alternate;
+      margin: 10px 0;
     }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 20px #b47bff; }
-      to { text-shadow: 0 0 30px #d4a0ff, 0 0 40px #b47bff; }
+    @media (max-width: 768px) {
+      h1 { font-size: 32px; }
     }
 
     header p {
       font-size: 18px;
-      margin: 10px 0 0 0;
-      opacity: 0;
-      animation: fadeInUp 1s ease-out 0.5s forwards;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Styles for the About Us button */
     .about-us-btn {
       display: inline-block;
-      background: linear-gradient(90deg, #9b5bff, #d4a0ff); /* Brighter gradient */
-      color: white;
+      background: linear-gradient(90deg, #9b5bff, #d4a0ff);
       padding: 12px 24px;
-      font-size: 18px;
       font-weight: 600;
-      text-decoration: none;
       border-radius: 8px;
-      margin-top: 20px; /* Added margin to space it below the paragraph */
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(155, 91, 255, 0.4); /* Adjusted shadow to match brighter color */
-      animation: fadeInUp 1s ease-out 0.7s forwards; /* Adjusted animation delay */
-      opacity: 0;
+      margin-top: 15px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
     }
 
-    .about-us-btn:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 6px 20px rgba(155, 91, 255, 0.6); /* Adjusted shadow for hover */
-      text-shadow: 0 0 10px #b47bff;
+    @media (max-width: 768px) {
+      .about-us-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+      }
     }
 
-    h2 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 36px;
-      color: #a76cff;
-      text-shadow: 0 0 8px #792bff;
-      animation: fadeInUp 1s ease-out 0.9s forwards; /* Adjusted delay */
-      opacity: 0;
-    }
+    /* ---------------- Sections ---------------- */
 
     .section {
       width: 90%;
@@ -149,53 +111,51 @@
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(130, 80, 255, 0.4);
-      animation: fadeInUp 1s ease-out 1.1s forwards; /* Adjusted delay */
-      opacity: 0;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #a76cff;
+    }
+
+    @media (max-width: 768px) {
+      h2 { font-size: 24px; }
     }
 
     .hero-ai {
       background-image: url('ai.jpg');
+      height: 260px;
       background-size: cover;
       background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 300px;
       border-radius: 12px;
       margin-top: 20px;
-      box-shadow: 0 0 20px #9b5bff;
-      font-size: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
       font-weight: bold;
-      color: white;
-      text-shadow: 0 0 10px #000;
-      letter-spacing: 2px;
-      position: relative;
-      overflow: hidden;
     }
 
-    .hero-ai::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      animation: shimmer 3s infinite;
+    @media (max-width: 768px) {
+      .hero-ai { height: 180px; font-size: 20px; }
     }
 
-    @keyframes shimmer {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
+    /* ---------------- Events ---------------- */
 
     .events-container {
+      width: 90%;
+      margin: auto;
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      animation: fadeInUp 1s ease-out 1.3s forwards; /* Adjusted delay */
-      opacity: 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .events-container {
+        flex-direction: column;
+      }
     }
 
     .day-section {
@@ -203,213 +163,165 @@
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(130, 80, 255, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      .day-section { width: 100%; }
     }
 
     .event-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+    }
+
+    @media (max-width: 480px) {
+      .event-list {
+        grid-template-columns: 1fr;
+      }
     }
 
     .event {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 15px;
-      border-radius: 12px;
-      text-align: center;
-      font-size: 18px;
-      border: 1px solid rgba(200, 150, 255, 0.3);
-      transition: all 0.3s ease;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      animation: fadeInUp 0.8s ease-out forwards;
-      opacity: 0;
-      animation-delay: calc(var(--i) * 0.1s);
-      /* Updated for image background */
+      height: 150px;
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat;
-      height: 150px; /* Set height for the box */
+      border-radius: 12px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       color: white;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* For text readability over image */
-    }
-
-    .event::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.5s;
-    }
-
-    .event:hover::before {
-      left: 100%;
-    }
-
-    .event:hover {
-      transform: scale(1.05) translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 10px 30px rgba(130, 80, 255, 0.6);
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: #1a1a1a;
-      font-size: 14px;
-      animation: fadeIn 1s ease-out 1.5s forwards; /* Adjusted delay */
-      opacity: 0;
+      text-shadow: 0 0 6px #000;
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
-      .events-container {
-        flex-direction: column;
-      }
-      .day-section {
-        width: 100%;
-      }
-      h1 {
-        font-size: 36px;
-      }
-      .hero-ai {
-        height: 200px;
-        font-size: 24px;
-      }
-      .event {
-        height: 120px; /* Adjust height for mobile */
-      }
-      .about-us-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
+      .event { height: 120px; }
     }
+
+    .event:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(130, 80, 255, 0.7);
+    }
+
+    /* ---------------- Footer ---------------- */
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Zeal Logo Left" class="logo-left">
-  <img src="logo.png" alt="Zeal Logo Right" class="logo-right">
-  <img src="collage.png" alt="College Logo" style="height:120px; margin-top:80px;">
+  <img src="logo.png" class="logo-left" alt="Zeal Logo Left">
+  <img src="logo.png" class="logo-right" alt="Zeal Logo Right">
+
+  <img src="collage.png" alt="College Logo">
+
   <h1>ZEAL – IT Feast 2026</h1>
   <p>Hosted by Siddharth College | 21–22 January</p>
+
   <a href="About.html" class="about-us-btn">About Us</a>
 </header>
+
 
 <div class="section">
   <h2>AI Revolution – The Future is Now</h2>
   <div class="hero-ai">AI Revolution</div>
 </div>
 
+
+<!-- ---------------- Events ---------------- -->
+
 <div class="events-container">
+
+  <!-- Day 1 -->
   <div class="day-section">
     <h2>Day 1 Events – 21 January</h2>
+
     <div class="event-list">
-      <div class="event" style="--i: 1; background-image: url('box_cricket.png');">
-        <div>Box Cricket</div>
-      </div>
+
+      <div class="event" style="background-image:url('box_cricket.png');">Box Cricket</div>
 
       <a href="BGMI.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 2; background-image: url('bgmi.jpeg');">
-          <div>BGMI</div>
-        </div>
+        <div class="event" style="background-image:url('bgmi.jpeg');">BGMI</div>
       </a>
 
       <a href="Pixel.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 3; background-image: url('pixel.jpeg');">
-          <div>Passive Pixel</div>
-        </div>
+        <div class="event" style="background-image:url('pixel.jpeg');">Passive Pixel</div>
       </a>
-         <a href="Carrom.html" style="text-decoration:none; color:inherit;">
-      <div class="event" style="--i: 4; background-image: url('carrom.jpeg');">
-        <div>Carrom</div>
-      </div></a>
+
+      <a href="Carrom.html" style="text-decoration:none; color:inherit;">
+        <div class="event" style="background-image:url('carrom.jpeg');">Carrom</div>
+      </a>
 
       <a href="Tech.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 5; background-image: url('tech.webp');">
-          <div>Tech Quest</div>
-        </div>
+        <div class="event" style="background-image:url('tech.webp');">Tech Quest</div>
       </a>
 
       <a href="Bug.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 6; background-image: url('bugbuster.jpeg');">
-          <div>Bug Buster</div>
-        </div>
+        <div class="event" style="background-image:url('bugbuster.jpeg');">Bug Buster</div>
       </a>
 
       <a href="Canva.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 7; background-image: url('canva.jpeg');">
-          <div>Canva</div>
-        </div>
+        <div class="event" style="background-image:url('canva.jpeg');">Canva</div>
       </a>
+
     </div>
   </div>
 
+
+  <!-- Day 2 -->
   <div class="day-section">
     <h2>Day 2 Events – 22 January</h2>
+
     <div class="event-list">
+
       <a href="Code.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 8; background-image: url('codewars.jpeg');">
-          <div>Website Creating</div>
-        </div>
+        <div class="event" style="background-image:url('codewars.jpeg');">Website Creating</div>
       </a>
 
       <a href="Freefire.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 9; background-image: url('freefire.jpeg');">
-          <div>Free Fire</div>
-        </div>
+        <div class="event" style="background-image:url('freefire.jpeg');">Free Fire</div>
       </a>
 
       <a href="Tech.html" style="text-decoration:none; color:inherit;">
-      <div class="event" style="--i: 10; background-image: url('WhatsApp Image 2025-12-03 at 10.56.43 PM(2).jpeg');">
-        <div>Tech Meme</div>
-      </div></a>
-
-        <a href="Chess.html" style="text-decoration:none; color:inherit;">
-      <div class="event" style="--i: 11; background-image: url('chess.jpeg');">
-        <div>Chess</div>
-      </div></a>
-
-        <a href="A.html" style="text-decoration:none; color:inherit;">
-      <div class="event" style="--i: 12; background-image: url('active.webp');">
-        <div>Active Trading</div>
-      </div></a>
-
-      <a href="Hunt.html" style="text-decoration:none; color:inherit;">
-        <div class="event" style="--i: 13; background-image: url('hunt.jpg');">
-          <div>AI Treasure Hunt</div>
-        </div>
+        <div class="event" style="background-image:url('WhatsApp Image.jpeg');">Tech Meme</div>
       </a>
 
-      <div class="event" style="--i: 14; background-image: url('https://via.placeholder.com/200x150/daa520/000000?text=Blur');">
-        <div>Blurray Image</div>
+      <a href="Chess.html" style="text-decoration:none; color:inherit;">
+        <div class="event" style="background-image:url('chess.jpeg');">Chess</div>
+      </a>
+
+      <a href="A.html" style="text-decoration:none; color:inherit;">
+        <div class="event" style="background-image:url('active.webp');">Active Trading</div>
+      </a>
+
+      <a href="Hunt.html" style="text-decoration:none; color:inherit;">
+        <div class="event" style="background-image:url('hunt.jpg');">AI Treasure Hunt</div>
+      </a>
+
+      <div class="event" style="background-image:url('https://via.placeholder.com/300x200/daa520/000?text=Blur');">
+        Blurray Image
       </div>
+
     </div>
   </div>
+
 </div>
 
+
 <div class="footer">
-  <p>© 2025 Siddharth College – ZEAL IT Feast | Designed with passion for tech & innovation.</p>
+  © 2025 Siddharth College – ZEAL IT Feast | Designed with passion for tech & innovation.
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-

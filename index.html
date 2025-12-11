@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEAL IT Fest – Siddharth College</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: url('Bg.jpg') no-repeat center center / cover;
+      color: white;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image: radial-gradient(circle, rgba(122, 80, 255, 0.15) 1px, transparent 1px);
+      background-size: 50px 50px;
+      animation: float 20s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50px); }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 15px;
+      position: relative;
+    }
+
+    .college-logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 190px;
+      width: auto;
+      max-width: 35vw;
+    }
+
+    .zeal-logo-center {
+      height: 280px;
+      max-width: 85vw;
+      margin-top: 40px;
+    }
+
+    h1 { font-size: 34px; margin: 10px 0; }
+    header p { font-size: 16px; }
+
+    .instructions-box {
+      width: 90%;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(150, 100, 255, 0.6);
+      backdrop-filter: blur(5px);
+      font-size: 16px;
+    }
+
+    .instructions-box h2 {
+      text-align: center;
+      color: #e6d0ff;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .instructions-box ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .instructions-box li {
+      margin-bottom: 10px;
+    }
+
+    .events-container {
+      width: 95%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .day-section {
+      flex: 1 1 100%;
+      background: rgba(255,255,255,0.07);
+      padding: 20px;
+      border-radius: 15px;
+    }
+
+    h2 { text-align: center; font-size: 26px; color: #d5b3ff; }
+
+    .event-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .event-item { display: flex; flex-direction: column; text-align: center; }
+
+    .event-link { text-decoration: none; color: inherit; display: block; }
+
+    .event {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    .event:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(150,100,255,0.8);
+    }
+
+    .event img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .event-content { margin-top: 8px; }
+
+    .event-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #f4dfff;
+    }
+
+    .footer-admin-committee {
+      width: 95%;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.07);
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .admin-info, .core-committee { flex: 1 1 100%; }
+
+    .admin-line {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .core-committee h3 {
+      color: #e8c7ff;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .core-text {
+      font-size: 17px;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 15px;
+      background: #111;
+      font-size: 14px;
+    }
+
+    @media (min-width: 700px) {
+      .day-section { flex: 1 1 48%; }
+      .admin-info, .core-committee { flex: 1 1 45%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  
+  <img src="logo.png" class="zeal-logo-center" alt="ZEAL Logo"><br>
+
+  <h1>ZEAL – IT Fest 2026</h1>
+  <p>Hosted by Siddharth College | 21 & 22 January</p>
+</header>
+
+<!-- INSTRUCTIONS BOX -->
+<div class="instructions-box">
+  <h2>GENERAL INSTRUCTIONS</h2>
+  <ul>
+    <li>College ID card is compulsory for entrance and participation.</li>
+    <li>The decision of the judges will be final and abiding.</li>
+    <li>Certificates will be given to every participant and winners will receive exciting prizes.</li>
+    <li>Registration will be online.</li>
+    <li>Online registration will include online payment.</li>
+    <li>Read the instructions carefully before participating in the events.</li>
+    <li>Also registration is available On the Spot</li>
+  </ul>
+</div>
+
+<!-- EVENTS -->
+<div class="events-container">
+
+  <!-- Day 1 -->
+  <div class="day-section">
+    <h2>Day 1 Events – 21 January</h2>
+
+    <div class="event-list">
+
+      <div class="event-item">
+        <a href="BoxC.html" class="event-link">
+          <div class="event"><img src="Box.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Box Cricket</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="BGMI.html" class="event-link">
+          <div class="event"><img src="bgmi.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">BGMI</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Pixel.html" class="event-link">
+          <div class="event"><img src="pixel.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Pixel Passage</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Carrom.html" class="event-link">
+          <div class="event"><img src="carrom.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Carrom</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Quize.html" class="event-link">
+          <div class="event"><img src="quize.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Tech Quiz</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="/events/Bug.html" class="event-link">
+          <div class="event"><img src="bugbuster.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Bug Buster</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Canva.html" class="event-link">
+          <div class="event"><img src="canva.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Canva Design</div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-section">
+    <h2>Day 2 Events – 22 January</h2>
+
+    <div class="event-list">
+
+      <div class="event-item">
+        <a href="Code.html" class="event-link">
+          <div class="event"><img src="codewars.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Website Making</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Freefire.html" class="event-link">
+          <div class="event"><img src="freefire.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Free Fire</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Tech.html" class="event-link">
+          <div class="event"><img src="Meme.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Tech Meme</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Chess.html" class="event-link">
+          <div class="event"><img src="chess.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Chess</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="ActiveT.html" class="event-link">
+          <div class="event"><img src="active.webp"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Active Trading</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Hunt.html" class="event-link">
+          <div class="event"><img src="hunt.jpg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">AI Treasure Hunt</div></div>
+      </div>
+
+      <div class="event-item">
+        <a href="Blur.html" class="event-link">
+          <div class="event"><img src="Blur.jpeg"></div>
+        </a>
+        <div class="event-content"><div class="event-title">Blurray Image</div></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer-admin-committee">
+
+  <div class="admin-info">
+    <div class="admin-line">PRINCIPAL : DR. U.M. MASKE</div>
+    <div class="admin-line">COORDINATOR : CHHAYA PAWASKAR</div>
+    <div class="admin-line">STUDENT INCHARGE : KARAN GB & NUPUR PANDEY</div>
+  </div>
+
+  <div class="core-committee">
+    <h3>CORE COMMITTEE</h3>
+    <div class="core-text">
+KARAN GB
+NUPUR PANDEY
+RUCHITA UMBARKAR
+RAJNISH JAISWAR
+AYUSH MARCHANDE
+SANAKAR MANAJI
+HARSHAD SHINDE
+MAYURI HOTKAR
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2025 Siddharth College – ZEAL IT Feast | Designed with passion for tech & innovation.
+</div>
+
+</body>
+
+</html>

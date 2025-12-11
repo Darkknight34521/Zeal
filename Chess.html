@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;     /* allow scroll */
+            overflow-y: auto; 
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            width: 380px;
+            max-width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+            backdrop-filter: blur(10px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+            width: 100%;
+            height: 150px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 28px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+        .info p:hover {
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        .btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="chess.jpeg" alt="Pixel Logo" class="logo">
+        <h2>Event Details</h2>
+        <div class="info">
+            <p><strong>Time :</strong> 11:00 AM</p>
+            <p><strong>Entry Fees :</strong> ₹50</p>
+            <p><strong>Prize :</strong>Cash Prize </p>
+            <p><strong>Venue :</strong>205 Auditorium</p>
+            <p><strong>Discription :</strong>
+                <ul>
+    <li>When castling, a player must first move the king with one hand and then move the rook with the same hand.</li><br>
+    <li>The movement of pieces must be done with one hand.</li><br>
+    <li>In the case of a promotion, if a player releases the pawn on the eighth rank, the player must promote the pawn. After the pawn has moved, the player may touch any piece not on the board, and the promotion is not finalized until the new piece is released on the promotion square.</li><br>
+    <li>If a player touches one of the opponent's pieces, then that piece must be captured if there is a legal move that allows it. If none of the touched pieces can be moved or captured, there is no penalty.</li><br>
+</ul>
+</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSddPDmA4OF40gZeT9kEXAnglcvsdPgBuQJwEmDt1Eg5CI47Iw/viewform?usp=publish-editor" class="btn">Register Now</a>
+    </div>
+</body>
+</html>

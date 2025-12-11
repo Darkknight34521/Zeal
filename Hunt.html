@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Treasure Hunt </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;     /* allow scroll */
+            overflow-y: auto; 
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            width: 380px;
+            max-width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+            backdrop-filter: blur(10px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+            width: 100%;
+            height: 150px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 28px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+        .info p:hover {
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        .btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hunt.jpg" alt="Pixel Logo" class="logo">
+        <h2>Event Details</h2>
+        <div class="info">
+            <p><strong>Time :</strong> 10:00 AM</p>
+            <p><strong>Entry Fees :</strong> ₹50/- (per person)</p>
+            <p><strong>Prize :</strong>Cash Prize </p>
+            <p><strong>Venue :</strong>Siddharth College</p>
+            <p><strong>Discription :</strong> 
+            <ul>
+    <li>Get ready for an exciting adventure with the AI Treasure Hunt, where technology meets fun! 🕵️‍♀️🤖</li>
+    <li>Teams will race across the campus to find hidden QR codes, each containing a tech-themed clue.</li>
+    <li>Solve riddles, puzzles, or challenges to uncover the location of the next QR code.</li>
+    <li>All clues are IT-related but easy enough for everyone — even non-tech students — to solve.</li>
+    <li>Sharpen your mind, collaborate with teammates, and move quickly to reach the final treasure!</li>
+
+    <li><strong>How it works:</strong>
+        <ul>
+            <li>Form teams of 3–5 members.</li>
+            <li>Scan QR codes to reveal clues.</li>
+            <li>Solve each clue to get hints for the next location.</li>
+            <li>The first team to solve the final clue and submit the correct answer wins!</li>
+        </ul>
+    </li>
+
+    <li><strong>Why join?</strong>
+        <ul>
+            <li>Test your problem-solving skills</li>
+            <li>Have fun with friends</li>
+            <li>Learn cool AI/tech concepts along the way</li>
+            <li>Win exciting prizes and bragging rights!</li>
+        </ul>
+    </li>
+
+    <li>Are you ready to embark on this AI-powered adventure?</li>
+    <li>Scan, solve, and sprint — the treasure awaits! 🏆</li>
+</ul>
+
+            </p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwaYBGErNtpVypH3f7ck0999CLTHqhe9124wrKExwA_03YXA/viewform?usp=publish-editor" class="btn">Register Now</a>
+    </div>
+</body>
+</html>

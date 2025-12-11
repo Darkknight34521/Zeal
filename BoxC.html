@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Cricket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+             font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;     /* allow scroll */
+            overflow-y: auto;      /* ENABLE SCROLL */
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            width: 380px;
+            max-width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeInUp 1s ease-out;
+            backdrop-filter: blur(10px);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+            width: 100%;
+            height: 150px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 28px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .info {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+        .info p:hover {
+            color: #007bff;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+        .btn:hover {
+            background: linear-gradient(45deg, #0056b3, #004085);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        }
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Box.jpeg" alt="Pixel Logo" class="logo">
+        <h2>Event Details</h2>
+        <div class="info">
+            <p><strong>Time:</strong> 10:00 AM </p>
+            <p><strong>Entry Fees :</strong> ₹500</p>
+            <p><strong>Prize :</strong>Cash Prize & Trophe</p>
+            <p><strong>Venue :</strong></p>
+            <p><strong>Discription :</strong>
+                <ul>
+    <li>It is an underarm soft tennis box tournament.</li><br>
+    <li>Each team must have 6 players.</li><br>
+    <li>College ID and Aadhar Card are compulsory for each player.</li><br>
+    <li>Each match will be of 3 overs.</li><br>
+    <li>A fresh bowler is required for each over (1-1-1).</li><br>
+    <li>6 balls per over.</li><br>
+    <li>Umpire's decision will be final.</li><br>
+    <li>If a team misbehaves or uses foul language, it will lead to disqualification.</li><br>
+    <li>Token amount is non-refundable. Teams must be present 30 minutes before the given time.</li><br>
+    <li>If a team is not present, it will be disqualified and the opponent team will receive a walkover.</li><br>
+</ul>
+</p>
+                        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqlZCfxunVE3RQs_oGywWy_MN-8IXGIuDvfTQm5ii7dBBB0w/viewform?usp=publish-editor" class="btn">Register Now</a>
+    </div>
+</body>
+</html>
+

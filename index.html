@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><br>
+<head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><br><br>
-  <title>ZEAL IT Fest – Siddharth College</title><br>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEAL IT Fest – Siddharth College</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
   <style>
     * { box-sizing: border-box; }
 
@@ -41,10 +39,24 @@
       100% { transform: translateY(-50px); }
     }
 
+    /* Fade-in animation for header */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Pulse animation for logo */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
     header {
       text-align: center;
       padding: 40px 15px;
       position: relative;
+      animation: fadeIn 1.5s ease-out;
     }
 
     .college-logo {
@@ -60,6 +72,12 @@
       height: 350px;
       max-width: 85vw;
       margin-top: 40px;
+      animation: pulse 3s ease-in-out infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .zeal-logo-center:hover {
+      transform: scale(1.1);
     }
 
     h1 { font-size: 34px; margin: 10px 0; }
@@ -74,6 +92,7 @@
       box-shadow: 0 0 20px rgba(150, 100, 255, 0.6);
       backdrop-filter: blur(5px);
       font-size: 16px;
+      animation: fadeIn 2s ease-out;
     }
 
     .instructions-box h2 {
@@ -98,6 +117,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      animation: fadeIn 2.5s ease-out;
     }
 
     .day-section {
@@ -156,6 +176,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      animation: fadeIn 3s ease-out;
     }
 
     .admin-info, .core-committee { flex: 1 1 100%; }
@@ -186,6 +207,25 @@
       font-size: 14px;
     }
 
+    /* Media queries for responsive logo height */
+    @media (max-width: 1024px) {
+      .zeal-logo-center {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .zeal-logo-center {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .zeal-logo-center {
+        height: 180px;
+      }
+    }
+
     @media (min-width: 700px) {
       .day-section { flex: 1 1 48%; }
       .admin-info, .core-committee { flex: 1 1 45%; }
@@ -196,9 +236,7 @@
 <body>
 
 <header>
-  
-  <img src="logo.png" class="zeal-logo-center" alt="ZEAL Logo"><br>
-
+  <img src="logo.png" class="zeal-logo-center" alt="ZEAL Logo">
   <h1>ZEAL – IT Fest 2026</h1>
   <p>Hosted by Siddharth College | 22 & 23 January</p>
 </header>
@@ -369,13 +407,4 @@ MAYURI HOTKAR</b>
 </div>
 
 </body>
-
-
 </html>
-
-
-
-
-
-
-
